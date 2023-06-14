@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodAppy" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cambia el color de la barra de acción -->
+        <item name="colorPrimary">#090909</item>
+
+        <!-- Cambia el color de fondo de la barra de acción -->
+        <item name="colorPrimaryDark">#FF0000</item>
+
+        <!-- Cambia el color del acento -->
+        <item name="colorAccent">#FF5722</item>
+
+        <!-- Cambia el color del texto de la barra de acción -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.FoodAppy" parent="Base.Theme.FoodAppy" />
+</resources>

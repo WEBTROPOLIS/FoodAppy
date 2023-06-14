@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondofood"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".food">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="71dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/logofoodappy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar2"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar2"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.02" />
+
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="Bienvenido"
+        app:layout_constraintStart_toEndOf="@id/imgLogo"
+        app:layout_constraintTop_toTopOf="@id/imgLogo"
+        app:layout_constraintBottom_toBottomOf="@id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txtsQue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:text="@string/queQuieres"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSushi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/txtsQue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgSushi"
+                android:layout_width="0dp"
+                android:layout_height="138dp"
+                android:layout_weight="1"
+                android:src="@drawable/prodsushi"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtSushi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sushi"
+                    android:textAlignment="center"
+                    android:textSize="22sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarSushi"
+                    android:layout_width="186dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:numStars="4"
+                    android:contentDescription="@string/ratingBarDescription" />
+
+                <Button
+                    android:id="@+id/btmPedirSushi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/pedir"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardViewSushi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtPizza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza"
+                    android:textAlignment="center"
+                    android:textSize="22sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarPizza"
+                    android:layout_width="186dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:numStars="4"
+                    android:contentDescription="@string/ratingBarDescription" />
+
+                <Button
+                    android:id="@+id/btmPedirPizza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/pedir"
+                    android:textAlignment="center" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/imgPizza"
+                android:layout_width="0dp"
+                android:layout_height="138dp"
+                android:layout_weight="1"
+                android:src="@drawable/prodpizza"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/cardViewPizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgSand"
+                android:layout_width="0dp"
+                android:layout_height="138dp"
+                android:layout_weight="1"
+                android:src="@drawable/prodsandwich"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtSand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sandwich"
+                    android:textAlignment="center"
+                    android:textSize="22sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarSand"
+                    android:layout_width="186dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:numStars="4"
+                    android:contentDescription="@string/ratingBarDescription" />
+
+                <Button
+                    android:id="@+id/btmPedirSand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/pedir"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="@string/btnVolver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewSand"
+        app:layout_constraintVertical_bias="0.874" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
